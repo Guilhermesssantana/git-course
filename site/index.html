@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JobConnect - Demo Completa</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135673.png" alt="logo">JobConnect</div>
+  <i class="fas fa-bars menu-toggle" id="menu-toggle"></i>
+  <nav>
+    <ul id="menu">
+      <li><a href="#"><i class="fas fa-briefcase"></i> Vagas</a></li>
+      <li><a href="#"><i class="fas fa-user"></i> Perfil</a></li>
+      <li><a href="#"><i class="fas fa-plus"></i> Criar Vaga</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="auth-container" id="auth-container">
+  <div class="tabs">
+    <div class="tab active" id="login-tab">Login</div>
+    <div class="tab" id="signup-tab">Cadastro</div>
+  </div>
+  <form id="login-form" class="active">
+    <input type="text" placeholder="CPF ou Matrícula" id="login-id" required>
+    <input type="password" placeholder="Senha" id="login-pass" required>
+    <button class="btn btn-primary"><i class="fas fa-right-to-bracket"></i> Entrar</button>
+    <div class="switch-link" onclick="switchTab('signup')">Não tem conta? Cadastre-se</div>
+  </form>
+  <form id="signup-form">
+    <select id="signup-type" required>
+      <option value="">Tipo de usuário</option>
+      <option value="candidato">Candidato</option>
+      <option value="empresa">Empresa</option>
+    </select>
+    <input type="text" placeholder="Nome completo ou Empresa" id="signup-name" required>
+    <input type="text" placeholder="CPF ou CNPJ" id="signup-id" required>
+    <input type="email" placeholder="Email" id="signup-email" required>
+    <input type="password" placeholder="Senha" id="signup-pass" required>
+    <button class="btn btn-primary"><i class="fas fa-user-plus"></i> Cadastrar</button>
+    <div class="switch-link" onclick="switchTab('login')">Já tem conta? Faça login</div>
+  </form>
+</div>
+
+<main id="main-content" style="display:none;">
+  <section class="hero">
+    <h2>Encontre sua vaga dos sonhos</h2>
+    <p>Conectando candidatos e empresas de forma simples e rápida</p>
+  </section>
+
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Buscar vagas por cargo ou palavra-chave...">
+    <select id="city-filter">
+      <option value="">Cidade</option>
+      <option value="sp">São Paulo</option>
+      <option value="rj">Rio de Janeiro</option>
+      <option value="bh">Belo Horizonte</option>
+    </select>
+    <select id="type-filter">
+      <option value="">Tipo de vaga</option>
+      <option value="clt">CLT</option>
+      <option value="pj">PJ</option>
+      <option value="estagio">Estágio</option>
+      <option value="freela">Freelancer</option>
+    </select>
+    <button onclick="renderJobs()">Buscar</button>
+  </div>
+
+  <div class="job-grid" id="job-grid"></div>
+
+  <div class="modal" id="job-modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeJobModal()">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-company"></p>
+      <p id="modal-type"></p>
+      <p id="modal-city"></p>
+      <p id="modal-desc"></p>
+      <p><strong>Skills:</strong> <span id="modal-skills"></span></p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 JobConnect | Todos os direitos reservados</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
