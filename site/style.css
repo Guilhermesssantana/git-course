@@ -55,3 +55,323 @@ main{padding:2rem 1rem;max-width:1200px;margin:auto;}
 .modal-content .close{position:absolute;top:10px;right:15px;cursor:pointer;font-size:1.5rem;}
 footer{background:#1f1f1f;text-align:center;padding:1rem;margin-top:2rem;font-size:0.9rem;}
 
+/* Estilos do editar.html */
+.edit-container {
+  background: #1f1f1f;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(77, 171, 247, 0.4);
+}
+
+h2 {
+  color: #4dabf7;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Estilos do empresa.html */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+.modal.active {
+  display: flex;
+}
+.modal-content {
+  background: #1f1f1f;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+}
+.modal-content h3 {
+  margin-bottom: 1rem;
+  color: #4dabf7;
+}
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.candidate {
+  background: #2a2a2a;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.candidate button {
+  padding: 0.3rem 0.7rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hire-btn {
+  background: #4dabf7;
+  color: #121212;
+}
+.hire-btn:hover {
+  background: #1c7ed6;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+#edit-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+}
+#edit-modal .modal-content {
+  width: 90%;
+  max-width: 600px;
+}
+#edit-modal .close {
+  top: 10px;
+  right: 15px;
+}
+
+/* Estilos do info.html */
+.job-detail {
+  background: #1f1f1f;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(77, 171, 247, 0.4);
+}
+
+.job-detail h2 {
+  color: #4dabf7;
+  margin-bottom: 0.5rem;
+}
+
+.job-detail .info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.job-detail .info span {
+  background: #2a2a2a;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.job-detail p {
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.job-detail ul {
+  margin-bottom: 1rem;
+}
+
+.job-detail ul li {
+  margin-bottom: 0.5rem;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.3s;
+}
+
+.apply-btn {
+  background: #4dabf7;
+  color: #121212;
+}
+
+.apply-btn:hover {
+  background: #1c7ed6;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.back-btn {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.back-btn:hover {
+  background: #3d3d3d;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Esquema de cores moderno */
+:root {
+  --primary-color: #4dabf7;
+  --secondary-color: #2a2a2a;
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --text-muted: #cccccc;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: var(--secondary-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.btn {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: var(--background-color);
+}
+
+.btn-primary:hover {
+  background: #1c7ed6;
+  color: var(--text-color);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.btn-secondary:hover {
+  background: #3d3d3d;
+  transform: translateY(-2px);
+}
+
+/* Animações suaves */
+.job-card {
+  background: var(--secondary-color);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.job-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(77, 171, 247, 0.6);
+}
+
+footer {
+  background: var(--secondary-color);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .job-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+

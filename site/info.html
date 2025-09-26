@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes da Vaga - JobConnect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135673.png" alt="logo">
+      JobConnect
+    </div>
+    <i class="fas fa-bars menu-toggle" id="menu-toggle"></i>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="editar.html">Editar</a></li>
+        <li><a href="empresa.html">Empresa</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li><a href="index.html#auth-container" class="btn btn-primary">Login/Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="job-detail">
+      <h2>Front-End Developer</h2>
+      <div class="info">
+        <span>Empresa: XPTO</span>
+        <span>Local: Remoto</span>
+        <span>Tipo: CLT</span>
+      </div>
+      <p><strong>Descrição:</strong> Buscamos um desenvolvedor Front-End para criar interfaces modernas e responsivas usando React e CSS. Você irá trabalhar em conjunto com a equipe de UX/UI para entregar produtos de alta qualidade.</p>
+      <p><strong>Requisitos:</strong></p>
+      <ul>
+        <li>Experiência com React e JavaScript</li>
+        <li>Conhecimento em CSS3 e HTML5</li>
+        <li>Desejável experiência com APIs REST</li>
+        <li>Boa comunicação e trabalho em equipe</li>
+      </ul>
+      <div class="btn-group">
+        <button class="btn apply-btn" href="./login.html"><i class="fas fa-paper-plane"></i> Candidatar-se</button>
+        <a href="index.html" class="btn back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 JobConnect | Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

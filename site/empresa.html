@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel da Empresa - JobConnect</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135673.png" alt="logo">
+      JobConnect
+    </div>
+    <i class="fas fa-bars menu-toggle" id="menu-toggle"></i>
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="empresa.html">Empresa</a></li>
+        <li><a href="info.html">Vagas</a></li>
+        <li><a href="index.html#auth-container" class="btn btn-primary">Login/Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Painel da Empresa</h2>
+
+    <!-- Estatísticas -->
+    <div class="stats">
+      <div class="stat-box">
+        <h3>Vagas Ativas</h3>
+        <p id="stat-vagas">5</p>
+      </div>
+      <div class="stat-box">
+        <h3>Candidatos</h3>
+        <p id="stat-candidatos">23</p>
+      </div>
+      <div class="stat-box">
+        <h3>Contratados</h3>
+        <p id="stat-contratados">2</p>
+      </div>
+    </div>
+
+    <!-- Grid de vagas -->
+    <div class="panel">
+      <div class="job-grid">
+        <div class="job-card">
+          <h3>Front-End Developer</h3>
+          <p>XPTO - Remoto</p>
+          <p>React, CSS</p>
+          <button class="btn btn-primary" onclick="openModal('Front-End Developer')">Ver Candidatos</button>
+          <button class="btn btn-secondary edit-btn" onclick="window.location.href='editar.html'">
+            <i class="fas fa-pencil-alt"></i> Editar
+          </button>
+        </div>
+        <div class="job-card">
+          <h3>Back-End Java</h3>
+          <p>SoftTech - RJ</p>
+          <p>Java, Spring</p>
+          <button class="btn btn-primary" onclick="openModal('Back-End Java')">Ver Candidatos</button>
+          <button class="btn btn-secondary edit-btn" onclick="window.location.href='editar.html'">
+            <i class="fas fa-pencil-alt"></i> Editar
+          </button>
+        </div>
+        <div class="job-card">
+          <h3>UX/UI Designer</h3>
+          <p>DesignHub - Remoto</p>
+          <p>Figma</p>
+          <button class="btn btn-primary" onclick="openModal('UX/UI Designer')">Ver Candidatos</button>
+          <button class="btn btn-secondary edit-btn" onclick="window.location.href='editar.html'">
+            <i class="fas fa-pencil-alt"></i> Editar
+          </button>
+        </div>
+      </div>
+      <button class="btn btn-primary" style="margin-top:1rem;">Criar Nova Vaga <i class="fas fa-plus"></i></button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 JobConnect | Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
